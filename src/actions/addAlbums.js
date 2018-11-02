@@ -1,6 +1,6 @@
 export const ADD_ALBUM = 'ADD_ALBUM'
 
-export function addAlbum (id, title) {
+export function addAlbums (id, title) {
   return {
     type: 'ADD_ALBUM',
     payload: {

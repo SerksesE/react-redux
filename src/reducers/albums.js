@@ -1,5 +1,6 @@
-import { ADD_ALBUM } from '../actions/addAlbum'
+import { ADD_ALBUM } from '../actions/addAlbums'
 import { SET_ALBUMS } from '../actions/setAlbums'
+
  
 export default (state = [], action = {}) => {
   switch (action.type) {
@@ -10,7 +11,6 @@ export default (state = [], action = {}) => {
       ]
       case SET_ALBUMS:
       return action.payload.map(albums => ({...albums}))
-
     default:
   return state
   }
