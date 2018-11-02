@@ -10,7 +10,7 @@ import { addAlbums } from '../actions/addAlbums'
 //   resolve => setTimeout(() => resolve(`I waited for ${time} ms`), time)
 // )
 
-class AlbumListContainer extends React.Component {
+class AlbumsListContainer extends React.Component {
 
   componentDidMount() {
     this.props.getAlbums()
@@ -59,4 +59,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { getAlbums, setAlbums, addAlbums })(AlbumListContainer)
+export default connect(mapStateToProps, { getAlbums, setAlbums, addAlbums })(AlbumsListContainer)
