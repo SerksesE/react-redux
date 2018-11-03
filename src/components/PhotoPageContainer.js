@@ -7,10 +7,9 @@ import { getPhotos } from '../actions/getPhotos'
 class PhotoPageContainer extends React.Component {
   componentDidMount() {
     const albumId = this.props.match.params.id
-    
-
 
     console.log(`Now fetch photos for albumId = ${albumId}`)
+    
     this.props.getPhotos(albumId)
   }
 
@@ -24,4 +23,4 @@ const mapStateToProps = (state) => ({
   photos: state.photos
 })
 
-export default connect(mapStateToProps, {getPhotos})(PhotoPageContainer)
+export default connect(mapStateToProps, { getPhotos })(PhotoPageContainer)
